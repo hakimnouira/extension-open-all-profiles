@@ -2,11 +2,10 @@
   "manifest_version": 3,
   "name": "Open URL in All Profiles",
   "version": "0.1.0",
-  "description": "Open a URL in multiple tabs in this Brave profile and manage shortcuts for other browser profiles.",
+  "description": "Open a URL in multiple tabs and keep notes for other browser profiles.",
   "action": {
     "default_title": "Open URL in All Profiles",
     "default_popup": "popup.html"
   },
-  "permissions": ["tabs", "storage"],
-  "host_permissions": ["<all_urls>"]
+  "permissions": ["tabs", "storage"]
 }

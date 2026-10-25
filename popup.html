@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open URL in All Profiles</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <header><div class="mark">↗</div><div><h1>Open URL in All Profiles</h1><p>Send a page to your browser sessions</p></div></header>
+    <label for="url">Page URL</label>
+    <input id="url" type="url" placeholder="https://aistudio.google.com/" autocomplete="url" spellcheck="false">
+    <div class="row">
+      <div class="field grow"><label for="count">Tabs in this profile</label><select id="count">
+        <option value="1">1 tab</option><option value="2">2 tabs</option><option value="3">3 tabs</option><option value="4">4 tabs</option><option value="5">5 tabs</option><option value="6">6 tabs</option><option value="8">8 tabs</option><option value="10">10 tabs</option>
+      </select></div>
+      <label class="check"><input id="remember" type="checkbox"> Remember URL</label>
+    </div>
+    <button id="open">Open tabs</button><p id="status" role="status" aria-live="polite"></p>
+    <section>
+      <div class="section-head"><h2>Other profile shortcuts</h2><span class="tag">Optional</span></div>
+      <p class="help">A normal extension can't control other Brave profiles directly. Add shortcuts to help launch them with this URL.</p>
+      <div class="profile-form"><input id="profileName" type="text" placeholder="Profile name (e.g. Work)"><input id="profileCommand" type="text" placeholder="Optional launch command or shortcut note"><button class="secondary" id="addProfile">Add shortcut</button></div>
+      <ul id="profiles" class="profiles"></ul>
+    </section>
+    <footer>Runs locally in your browser. Never asks for passwords, cookies, or API keys.</footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
